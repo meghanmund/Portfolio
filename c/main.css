@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html{
+      --text-background-color: rgba(39, 39, 43, 0.75);
+      --text-color: #E4F2E7;
+      --nav-text-color: #AFB1B6;
+      --ratio: 		1.2;
+      --h3-size: 	calc( 1rem * var(--ratio) );
+      --h2-size: 	calc( var(--size-one) * var(--ratio) );
+      --h1-size: 	calc( var(--size-two) * var(--ratio) );
+  }
+  
+  
+  body {
+      background-color: #000;
+      margin: 0;
+  }
+
+  h1{
+    color: var(--text-color);
+    text-shadow: 0px 0px 8px #0ECF9F;
+    font-family: Source Serif Pro;
+    font-size: var(--h1-size);
+    font-weight: 300;
+
+  }
+
+  h2{
+    color: var(--text-color);
+    font-family: Source Sans Pro;
+    font-size: var(--h2-size);
+    font-weight: 400;
+  }
+
+  p{
+    color: var(--text-color);
+    font-family: arial;
+    font-size: 0.625rem;
+    font-weight: 700;
+  }
+
+  footer{
+    align-items: center;
+    background-color: #000;
+    color: var(--text-color);
+    display:flex;
+    flex-direction: column;
+    font-size: small;
+    margin-top:6rem;
+    padding: 0.5rem;
+    position:absolute;
+    width:100%;
+  }
+  
+  .main-header{
+      align-content: center;
+      background-color: #000;
+      color: var(--nav-text-color);
+      display:flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: space-evenly;
+      position:fixed;
+  }
+  
+  .main-header h1{
+      color: var(--nav-text-color);
+      font-size: var(--h3-size);
+      margin: .5rem;
+      padding: .5rem;
+  }
+  
+  .main-header ul{
+      list-style: none;
+      font-size: smaller;
+  }
+  
+  .main-header li{
+      padding-bottom: 2rem;
+  }
+  
+  .main-header a{
+    color: var(--nav-text-color);
+      text-decoration: none;
+      transition: color 0.4s ease;
+  }
+  
+  .main-header a:hover{
+      color: var(--text-color);
+      transition: color 0.4s ease;
+  }
+
+  /*desktop view for homepage*/
+
+  @media only screen and (min-width: 992px){
+
+    html {
+		--ratio: 1.6;
+	}
+
+    .main {
+        display: grid; 
+        grid-template-columns: repeat(6, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        gap: 0px 32px; 
+        grid-template-areas: 
+          ". . . . . ."
+          ". . . . . ."
+          ". . . . . ."; 
+    }
+
+    .about{
+      padding:2rem;
+    }
+
+    .left{
+      padding:2rem;
+      }
+
+  .bottom{
+    padding:2rem;
+  }
+
+  footer{
+    margin-top:0;
+  }
+
+}
+
+    /*homepage*/
+  
+  .main {
+      background-color: var(--text-background-color);
+      color:var(--text-color);
+      height: 100vh;
+      display: block;
+      padding-left: 10rem;
+      margin-top:auto;
+      margin-bottom: auto;
+      transition: 500ms;
+      text-shadow: 0px 1px 2px #5e5e5e;
+    }
+  
+  .left{
+      background-color: var(--text-background-color);
+      padding:1rem;
+      text-align: left;
+      width:100%;
+    }
+  
+  .about{
+      background-color: var(--text-background-color);
+      padding:1rem;
+      text-align: left;
+      width:100%;
+    }
+  
+  .right{
+      background-color: var(--text-background-color);
+      padding:1rem;
+      text-align: left;
+      width:100%;
+    }
+
+    /* My Work/ Portfolio Page Styling*/
+
+    /*About Me Page Styling*/
+
+    /*Contact Me Styling*/
+
+.contact{
+    z-index: -1;
+
+}
+
+.contact:active{
+        width: 50%;
+        height: 50%;
+        animation-name: contact-animation;
+        animation-fill-mode: forwards;
+        animation-duration: 5s;
+      }
+      
+      @keyframes contact-animation {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(100vw);
+        }
+      }
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    resize: vertical
+  }
+  
+  input[type=submit] {
+    background-color: var(--text-background-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #E4F2E7;
+    color: #27272B;
+  }
+
+  /* Contact Form animates off styling */
+
+ form > #submit:active {
+    -webkit-animation: get-off 3s;
+    animation: get-off 3s;
+    }
+
+    @keyframes get-off {
+    from {
+        transform: translateY(100vw);
+      }
+      to {
+        transform: translateY(0vw);
+      }
+    }
