@@ -15,7 +15,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">My Work</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="contact"><a href="#">Contact</a></li>
       </ul>
     </div>
 
@@ -84,26 +84,18 @@
       </div>
     </div>
 
-        <div id="animate">
-            <form class="contact">
-              <input
-                type="text"
-                id="name"
-                name="firstnamelastname"
-                placeholder="Your name..."/>
-              <input
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Your email..."/>
-              <textarea
-                id="subject"
-                name="subject"
-                placeholder="Write something...">
-              </textarea>
-              <input id="Submit" type="submit" value="Submit"/>
-            </form>
-    </div>
+    <div class="form animate">
+      <form action="https://formsubmit.co/meghanmund@gmail.com" method="POST">
+   <input type="text" name="name" required placeholder="Your name...">
+   <input type="email" name="email" required placeholder="Your email...">
+       <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something...">
+        </textarea>
+        <input id="button" type="submit" value="Submit" onclick="animation()"/>
+      </form>
+  </div>
 
     <footer>
       <p>&copy;2023 Meghan Mund</p>
