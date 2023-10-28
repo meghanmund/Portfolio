@@ -16,34 +16,39 @@
   
   body {
       background-color: #000;
-      max-width: 100%;
-      max-height: 100%;
   }
 
   h1{
     color: var(--text-color);
     text-shadow: 0px 0px 8px #0ECF9F;
-    font-family: Source Serif Pro;
+    text-align: center;
+    font-family: Source Serif Pro, Georgia, 'Times New Roman', Times, serif;
     font-size: var(--h1-size);
     font-weight: 300;
+    padding: 1rem;
 
   }
 
   h2{
     color: var(--text-color);
-    font-family: Source Sans Pro;
+    font-family: Source Sans Pro, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: var(--h2-size);
     font-weight: 400;
   }
 
+  h3{
+  }
+
   p{
+    background-color: var(--text-background-color);
     color: var(--text-color);
     font-family: arial;
     font-size: 1rem;
     font-weight: 700;
+    padding: 1rem;
   }
 
-  .footer{
+  .footer p{
     align-items: center;
     background-color: #000;
     bottom: 0;
@@ -60,6 +65,7 @@
       align-content: center;
       background-color: #000;
       color: var(--nav-text-color);
+      font-family: Source Sans Pro, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       display:flex;
       flex-direction: column;
       height: 100%;
@@ -67,7 +73,8 @@
       position:fixed;
   }
   
-  .main-header h1{
+  .main-header h2{
+    align-content: center;
       color: var(--nav-text-color);
       font-size: var(--h3-size);
   }
@@ -95,14 +102,15 @@
     /*homepage*/
   
   .main {
-      background-color: var(--text-background-color);
       color:var(--text-color);
-      min-height: 100%;
       display: block;
+    }
+
+    .main h1{
+      text-align: left;
     }
   
   .left{
-      background-color: var(--text-background-color);
       text-align: left;
       width:100%;
     }
@@ -113,13 +121,104 @@
       width:100%;
     }
   
-  .right{
+  .bottom{
       background-color: var(--text-background-color);
       text-align: left;
       width:100%;
+      padding:1rem;
+    }
+  
+    /* My Work / Portfolio*/
+
+    .folio{
+      display:block;
     }
 
-      /*desktop view for homepage*/
+    .proj-text p{
+      background-color: transparent;
+    }
+  
+    .proj-text {
+      background-color: var(--text-background-color);
+    }
+
+    .proj1{
+      display:block;
+    }
+
+    .proj2{
+      display:block;
+    }
+
+    .proj3{
+      display:block;
+    }
+
+    /*About Me*/
+        
+        /*Contact Me form*/
+        .form {
+          height: 100px;
+          width: 100px;
+        }    
+    
+        .form-active{
+            animation-name: contact-animation;
+            animation-fill-mode: forwards;
+            animation-duration: 5s;
+          }
+          
+          @keyframes contact-animation {
+            from {
+              transform: translateY(0);
+              opacity: 0;
+            }
+            to {
+              transform: translateY(100%);
+              opacity: 100;
+            }
+          }
+    
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 1em;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        resize: vertical
+      }
+      
+      input[type=submit] {
+        background-color: var(--text-background-color);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #E4F2E7;
+        color: #27272B;
+      }
+    
+      /* Contact Form animates off styling */
+    
+     .animate-active{
+        -webkit-animation: get-off 3s;
+        animation: get-off 3s;
+        }
+    
+        @keyframes get-off {
+        from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0%);
+          }
+        }
+
+/*desktop for home*/
 
   @media only screen and (min-width: 992px){
 
@@ -137,7 +236,12 @@
       ". left left about about ."
       ". bottom bottom bottom bottom ."
       ". . . . . .";
+      justify-content: center; 
+      align-content: center; 
+      justify-items: center; 
+      align-items: center; 
   }
+  
   
   .bottom {  display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -160,73 +264,86 @@
   .left { grid-area: left; }
   
   .about { grid-area: about; }
+
   
-  
+        /*desktop for portfolio*/
 
-    /* My Work/ Portfolio Page Styling*/
-
-    /*About Me Page Styling*/
-
-    /*Contact Me Styling*/
-
-    .form {
-      height: 100px;
-      width: 100px;
-    }    
-
-    .form-active{
-        animation-name: contact-animation;
-        animation-fill-mode: forwards;
-        animation-duration: 5s;
-      }
-      
-      @keyframes contact-animation {
-        from {
-          transform: translateY(0);
-          opacity: 0;
+        .folio {  display: grid;
+          grid-template-columns: repeat(5, 1fr) 0.5fr;
+          grid-template-rows: repeat(3, 1fr) .25fr;
+          gap: 32px 32px;
+          grid-auto-flow: row;
+          grid-template-areas:
+            ". . . . . ."
+            ". . work-left work-center work-right ."
+            ". . work-left work-center work-right ."
+            ". . . . . .";
+            justify-content: center; 
+            align-content: center; 
+            justify-items: center; 
+            align-items: center; 
         }
-        to {
-          transform: translateY(100%);
-          opacity: 100;
+          
+        /*desktop for proj1*/
+
+        .proj1 {  display: grid;
+          grid-template-columns: repeat(5, 1fr) 0.5fr;
+          grid-template-rows: repeat(3, 1fr) .25fr;
+          gap: 16px 32px;
+          grid-template-areas:
+            ". . . . . ."
+            ". . previous vid-proj forward ."
+            ". . . vid-proj . ."
+            ". . . . . .";
         }
-      }
+        
+        .vid-proj { grid-area: vid-proj; }
+        
+        .previous { grid-area: previous; }
+        
+        .forward { grid-area: forward; }
+        
 
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 1em;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    resize: vertical
-  }
-  
-  input[type=submit] {
-    background-color: var(--text-background-color);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #E4F2E7;
-    color: #27272B;
-  }
+        /*desktop for proj2*/
 
-  /* Contact Form animates off styling */
+        .proj2 {  display: grid;
+          grid-template-columns: repeat(5, 1fr) 0.5fr;
+          grid-template-rows: repeat(3, 1fr) .25fr;
+          gap: 32px 32px;
+          grid-template-areas:
+            ". . . . . ."
+            ". . previous proj2-pic forward ."
+            ". . . proj2-pic . ."
+            ". . . . . .";
+        }
 
- .animate-active{
-    -webkit-animation: get-off 3s;
-    animation: get-off 3s;
-    }
+        .proj2-pic { grid-area: proj2-pic; }
+        
+        .previous { grid-area: previous; }
+        
+        .forward { grid-area: forward; }
 
-    @keyframes get-off {
-    from {
-        transform: translateY(100%);
-      }
-      to {
-        transform: translateY(0%);
-      }
-    }
+        /*desktop for proj3*/
+
+        .proj3 {  display: grid;
+          grid-template-columns: repeat(5, 1fr) 0.5fr;
+          grid-template-rows: repeat(3, 1fr) .25fr;
+          gap: 32px 32px;
+          grid-template-areas:
+            ". . . . . ."
+            ". . previous proj3-pic forward ."
+            ". . . proj3-pic . ."
+            ". . . . . .";
+        }
+
+        .proj3-pic { grid-area: proj3-pic; }
+        
+        .previous { grid-area: previous; }
+        
+        .forward { grid-area: forward; }
+
+        /*desktop for about*/
+
+
+
   }
