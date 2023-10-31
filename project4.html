@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Meghan Mund Designs - Grid Playout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="c/main.css" />
+  </head>
+
+  <body>
+  <header class="main-header">
+    <div class="logo-text">
+    <h2>meghan</h2>
+    <h2>mund</h2>
+    <h2>designs</h2>
+  </div>
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active-nav"><a href="portfolio.html">My Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#" id="contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <a href="https://www.linkedin.com/in/meghan-mund123/"><img src="assets/linkedin.svg" alt="LinkedIn Logo"/></a>
+      <a href="https://www.instagram.com/trustworthy_robit/"><img src="assets/instagram.svg" alt="Instagram Logo"/></a>
+    </div>
+  </header>
+
+
+    <h1>Project Details &mdash; CSS Grid Playout</h1>
+
+    <div class="proj4">
+
+        <picture class="proj4-pic">
+            <source
+              media="(orientation: portrait)"
+              srcset="
+                assets/proj4-portrait-small.webp  320w,
+                assets/proj4-portrait-med.webp    720w,
+              "
+              sizes="(min-width: 60rem) 80vw, 
+                (min-width: 40rem) 90vw, 
+                100vw"
+            />
+            <source
+              media="(orientation: landscape)"
+              srcset="
+              assets/proj4-landscape-small.webp  320w,
+              assets/proj4-landscape-med.webp    720w,
+              "
+              sizes="(min-width: 60rem) 80vw, 
+                (min-width: 40rem) 90vw, 
+                100vw"
+            />
+            <img src="assets/fallback4.webp" />
+          </picture>
+
+          <div class="arrows">
+            <svg
+            class="previous" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <a xlink:href="project3.html">
+                <rect width="64" height="64" fill="#0ECF9F"/>
+                <path d="M16.8421 32.3304L29.4736 41.0818V23.5789L16.8421 32.3304Z" fill="#27272B"/>
+                <path d="M43.7894 28.9619H26.9473V35.6988H43.7894V28.9619Z" fill="#27272B"/>
+              </a></svg>
+    
+            <svg
+            class="forward" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+            <a xlink:href="project1.html">
+            <rect x="0.5" y="0.5" width="64" height="64" fill="#0ECF9F"/>
+            <path d="M47.6579 32.8304L35.0264 41.5818V24.0789L47.6579 32.8304Z" fill="#27272B"/>
+            <path d="M20.7106 29.4619H37.5527V36.1988H20.7106V29.4619Z" fill="#27272B"/>
+          </a>
+            </svg>
+          </div>
+
+        <div class="proj-text4">
+            <a class="link">Project Link</a>
+            
+          <p>
+            This was a project from  where I got to play with CSS Grid layouts. You can tell the left-side-navigation inspired me. It was especially fun creating my background elements, where I used z-index to overlap and twist my objects.
+          </p>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="outer-form">
+        <div class="form animate reset">
+            <a href="#" id="exit">X</a>
+            <form action="https://formsubmit.co/meghanmund@gmail.com" method="POST">
+         <input type="text" name="name" required placeholder="Your name...">
+         <input type="email" name="email" required placeholder="Your email...">
+             <textarea
+    
+                name="subject"
+                placeholder="Write something...">
+              </textarea>
+              <input id="button" type="submit" value="Submit"/>
+            </form>
+        </div>
+      </div>
+
+    <footer class="footer">
+      <p>&copy;2023 Meghan Mund</p>
+    </footer>
+    <script type="text/javascript" src="j/main.js" defer></script>
+  </body>
+</html>

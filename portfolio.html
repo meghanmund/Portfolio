@@ -8,29 +8,34 @@
     <link rel="stylesheet" type="text/css" media="screen" href="c/main.css"/>
   </head>
 
+<body>
   <header class="main-header">
-    <h2>meghan mund designs</h2>
+    <div class="logo-text">
+    <h2>meghan</h2>
+    <h2>mund</h2>
+    <h2>designs</h2>
+  </div>
     <div class="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">My Work</a></li>
+        <li class="active-nav"><a href="portfolio.html">My Work</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="contact"><a href="#">Contact</a></li>
+        <li><a href="#" id="contact">Contact</a></li>
       </ul>
     </div>
 
     <div class="social">
-      <a href="#"><img src="#" alt="LinkedIn Logo"/></a>
-      <a href="#"><img src="#" alt="Instagram Logo"/></a>
+      <a href="https://www.linkedin.com/in/meghan-mund123/"><img src="assets/linkedin.svg" alt="LinkedIn Logo"/></a>
+      <a href="https://www.instagram.com/trustworthy_robit/"><img src="assets/instagram.svg" alt="Instagram Logo"/></a>
     </div>
   </header>
 
-  <body>
+
     <h1>My Work</h1>
 
     <div class="folio">
-      <div class="work-left">
-        <img class="video-preview" src="#" alt="screencap of a kinetic-type project"/>
+      <div class="work1">
+        <img class="prev1" src="assets/work-left.webp" alt="screencap of a kinetic-type project"/>
         <h2>Kinetic Typography</h2>
         <p>
           A motion-graphic animation where I animated text to follow narration.
@@ -38,8 +43,8 @@
         <a href="project1.html"><button>See Project Details</button></a>
       </div>
 
-      <div class="work-center">
-        <img class="BACC-preview" src="#" alt="image of an app prototype"/>
+      <div class="work2">
+        <img class="prev2" src="assets/work-center.webp" alt="image of an app prototype"/>
         <h2>BACC Community App</h2>
         <p>
           With BACC Community, I got to design an app, prototype, and then go
@@ -48,8 +53,8 @@
         <a href="project2.html"><button>See Project Details</button></a>
       </div>
 
-      <div class="work-right">
-        <img class="branding-preview" src="#" alt="A psych practice logo"/>
+      <div class="work3">
+        <img class="prev3" src="assets/work-right.webp" alt="A psych practice logo"/>
         <h2>Branding for Brother</h2>
         <p>
           I had the honor of designing some psychology practice logos. It's a
@@ -57,9 +62,19 @@
         </p>
         <a href="project3.html"><button>See Project Details</button></a>
       </div>
+
+    <div class="work4">
+      <img class="prev4" src="assets/work4.webp" alt="A psych practice logo"/>
+      <h2>CSS Grid Playouts</h2>
+      <p>
+        This was a project from  where I got to play with CSS Grid layouts.
+      </p>
+      <a href="project4.html"><button>See Project Details</button></a>
     </div>
+  </div>
 
     <div class="form animate">
+      <a href="#" id="exit">X</a>
       <form action="https://formsubmit.co/meghanmund@gmail.com" method="POST">
    <input type="text" name="name" required placeholder="Your name...">
    <input type="email" name="email" required placeholder="Your email...">
@@ -68,13 +83,13 @@
           name="subject"
           placeholder="Write something...">
         </textarea>
-        <input id="button" type="submit" value="Submit" onclick="animation()"/>
+        <input id="button" type="submit" value="Submit"/>
       </form>
   </div>
 
     <footer class="footer">
       <p>&copy;2023 Meghan Mund</p>
     </footer>
-
+    <script type="text/javascript" src="j/main.js" defer></script>
   </body>
 </html>

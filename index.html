@@ -1,39 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Meghan Mund Designs - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" media="screen" href="c/main.css"/>
-    <script type="text/javascript" src="j/main.js"></script>
   </head>
 
+  <body>
   <header class="main-header">
-    <h2>meghan mund designs</h2>
+    <div class="logo-text">
+    <h2>meghan</h2>
+    <h2>mund</h2>
+    <h2>designs</h2>
+  </div>
     <div class="nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li class="active-nav"><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">My Work</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#" id="contact"onclick="animation()">Contact</a></li>
+        <li><a href="#" id="contact">Contact</a></li>
       </ul>
     </div>
 
     <div class="social">
-      <a href="#"><img src="#" alt="LinkedIn Logo"/></a>
-      <a href="#"><img src="#" alt="Instagram Logo"/></a>
+      <a href="https://www.linkedin.com/in/meghan-mund123/"><img src="assets/linkedin.svg" alt="LinkedIn Logo"/></a>
+      <a href="https://www.instagram.com/trustworthy_robit/"><img src="assets/instagram.svg" alt="Instagram Logo"/></a>
     </div>
   </header>
 
-  <body>
     <div class="main">
       <div class="left">
-        <img src="#" alt="Portrait of Meghan"/>
+        <div class="left-image">
+        <img src="assets/portrait.webp" alt="Portrait of Meghan"/>
+      </div>
         <a href="portfolio.html"><button>Check Out My Work</button></a>
       </div>
 
-      <div class="about">
+      <div class="right">
         <h1>Hi, I'm Meghan</h1>
         <p>
           I'm a designer, animal enthusiast, climber, and real-life cartoon
@@ -43,8 +48,8 @@
       </div>
 
       <div class="bottom">
-        <div class="services">
-          <h2>Services:</h2>
+        <div class="skills">
+          <h2>Skills:</h2>
           <ul>
             <li>Graphic Design</li>
             <li>Motion Graphic Design</li>
@@ -56,35 +61,40 @@
 
         <div class="languages">
           <h2>Languages:</h2>
-          <img class="html-logo" src="#" alt="an html5 icon"/>
-          <img class="css-logo" src="#" alt="a css3 icon"/>
+          <img class="html-logo" src="assets/HTML.svg" alt="an html5 icon"/>
+          <img class="css-logo" src="assets/CSS.svg" alt="a css3 icon"/>
         </div>
 
         <div class="software">
           <h2>Software:</h2>
-          <img class="figma-logo" src="#" alt="A Figma logo"/>
-          <img class="illus-logo" src="#" alt="An Adobe Illustrator logo"/>
-          <img class="photo-logo" src="#" alt="An Adobe Photoshop logo"/>
-          <img class="ae-logo" src="#" alt="An Adobe After Effects logo"/>
+          <img class="figma-logo" src="assets/figma.svg" alt="A Figma logo"/>
+          <img class="illus-logo" src="assets/illustrator.svg" alt="An Adobe Illustrator logo"/>
+          <img class="photo-logo" src="assets/photoshop.svg" alt="An Adobe Photoshop logo"/>
+          <img class="ae-logo" src="assets/after-effects.svg" alt="An Adobe After Effects logo"/>
         </div>
       </div>
     </div>
 
-    <div class="form animate">
+    <div class="outer-form">
+    <div class="form animate reset">
+        <a href="#" id="exit">X</a>
         <form action="https://formsubmit.co/meghanmund@gmail.com" method="POST">
      <input type="text" name="name" required placeholder="Your name...">
      <input type="email" name="email" required placeholder="Your email...">
          <textarea
-            id="subject"
+
             name="subject"
             placeholder="Write something...">
           </textarea>
-          <input id="button" type="submit" value="Submit" onclick="animation()"/>
+          <input id="button" type="submit" value="Submit"/>
         </form>
     </div>
+  </div>
 
     <footer class="footer">
       <p>&copy;2023 Meghan Mund</p>
     </footer>
+
+    <script type="text/javascript" src="j/main.js" defer></script>
   </body>
 </html>
