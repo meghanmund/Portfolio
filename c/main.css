@@ -211,10 +211,7 @@ img {
   max-width: 240px;
 }
 
-.work1,
-.work2,
-.work3,
-.work4 {
+.work {
   background-color: var(--text-background-color);
   padding: 1rem;
   display: flex;
@@ -252,10 +249,7 @@ img {
   padding: 1rem;
 }
 
-.work1,
-.work2,
-.work3,
-.work4,
+.work,
 .about-left,
 .about-center,
 .about-right {
