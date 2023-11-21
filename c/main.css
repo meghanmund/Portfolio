@@ -9,8 +9,8 @@ html {
   --nav-text-color: #afb1b6;
   --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   --base-font-size: 14px;
-  --h1-size: clamp(2rem, calc(var(--base-font-size) * 2), 2rem);
-  --h2-size: clamp(1rem, calc(var(--base-font-size) * 1.15), 1.15rem);
+  --h1-size: clamp(2rem, calc(var(--base-font-size) * 2.5), 2.5rem);
+  --h2-size: clamp(1rem, calc(var(--base-font-size) * 1.25), 1.25rem);
 }
 
 body {
@@ -92,9 +92,8 @@ button:active,
   text-align: center;
   z-index: 1;
   position: fixed;
-  max-width: 5rem;
+  max-width: 6rem;
   height: 100%;
-  padding: 0 1rem;
   left: 0;
 }
 
@@ -152,13 +151,13 @@ button:active,
   margin-left: 1rem;
 }
 
-.main {
+.home-main {
   color: var(--text-color);
   display: block;
   max-width: 320px;
 }
 
-.main ul {
+.home-main ul {
   padding: 1rem;
 }
 
@@ -224,20 +223,14 @@ img {
   justify-content: space-between;
 }
 
-.proj1,
-.proj2,
-.proj3,
-.proj4 {
+.proj {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.proj-text1,
-.proj-text2,
-.proj-text3,
-.proj-text4 {
+.proj-text {
   text-align: left;
   background-color: var(--text-background-color);
   max-width: 240px;
@@ -410,7 +403,7 @@ input[type="submit"]:hover {
     margin-left: 12%;
   }
 
-  .main {
+  .home-main {
     display: grid;
     grid-template-columns: repeat(5, 1fr) 0.5fr;
     grid-template-rows: repeat(1fr) 0.25fr;
@@ -466,10 +459,7 @@ input[type="submit"]:hover {
     max-width: 720px;
   }
 
-  .proj-text1,
-  .proj-text2,
-  .proj-text3,
-  .proj-text4 {
+  .proj-text {
     background-color: var(--text-background-color);
     max-width: 600px;
     padding: 1rem;
