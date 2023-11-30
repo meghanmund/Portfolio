@@ -123,7 +123,9 @@ button:active,
   transition: color 0.2s ease;
 }
 
-.main-header .active-nav {
+.home .active-home,
+.about .active-about,
+.portfolio .active-port {
   color: var(--text-color);
 }
 
@@ -250,9 +252,7 @@ img {
 }
 
 .work,
-.about-left,
-.about-center,
-.about-right {
+.about{
   background-color: var(--text-background-color);
   display: flex;
   flex-direction: column;
