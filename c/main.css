@@ -202,9 +202,9 @@ li {
 
 /* My Work / Portfolio*/
 
-video {
-  width: 65%;
-  height: 65%;
+iframe {
+  width: 100%;
+  height: 100%;
   box-shadow: var(--box-shadow);
 }
 
